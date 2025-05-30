@@ -73,7 +73,7 @@
             <li class="list-none">&copy; 2025 My Custom Theme. All rights reserved.</li>
         </div>
         <div>
-            <li class="list-none lg:text-right">Code: <a class="text-accent" target="_blank" href="https://github.com/allanjmes/allanjames-woocommerce">github.com/allanjmes/woocommerce</a></li>
+            <li class="list-none lg:text-right">Code: <a class="text-accent" target="_blank" href="https://github.com/allanjmes/allanjames-camera-woocommerce">github.com/allanjames-camera-woocommerce</a></li>
             <li class="list-none lg:text-right">Contact: <a class="text-accent" target="_blank" href="mailto:allanjames.regala@gmail.com">allanjames.regala@gmail.com</a></li>
         </div>
     </div>
