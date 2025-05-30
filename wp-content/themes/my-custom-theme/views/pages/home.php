@@ -56,7 +56,7 @@
                 <div class="col-span-2 relative lg:-top-36 flex flex-col justify-center">
                     <img
                         src="<?php echo get_template_directory_uri() . '/src/assets/home/3d-camera.webp'; ?>"
-                        class="relative scale-80 lg:scale-100"
+                        class="relative scale-80 lg:scale-120 lg:-mt-10"
                         alt=""
                     >
                     <div>

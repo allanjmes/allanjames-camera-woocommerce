@@ -31,7 +31,7 @@
                     <div class="drawer-side dark:backdrop-opacity-5">
                         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                         <ul class="menu bg-secondary border-e border-primary text-base-content min-h-full w-70 md:w-90 lg:w-120 px-4 py-0">
-                            <div class="py-10 border-b border-gray-500 flex flex-row-reverse justify-between">
+                            <div class="py-11 md:py-13 lg:py-11 border-b border-gray-500 flex flex-row-reverse justify-between">
                                 <li class="my-auto flex justify-center items-middle">
                                     <button id="close-my-drawer">
                                         <svg
@@ -62,8 +62,8 @@
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 25 25"
                                             class="icon p-0
-                                                stroke-primary group-hover/svg-shop:stroke-secondary
-                                                fill-secondary group-hover/svg-shop:fill-primary h-[20px] w-[20px] lg:h-[40px] lg:w-[40px]"
+                                                stroke-primary fill-secondary
+                                                h-[20px] w-[20px] lg:h-[40px] lg:w-[40px]"
                                         >
                                             <path d="M8.5 10.5H5L6.5 19.5H18.5L20 10.5H16.5M8.5 10.5L10.2721 5.18377C10.4082 4.77543 10.7903 4.5 11.2208 4.5H13.7792C14.2097 4.5 14.5918 4.77543 14.7279 5.18377L16.5 10.5M8.5 10.5H16.5" stroke-width="1.2"/>
                                             <path d="M12.5 10.5V19.5" stroke-width="1.2"/>
@@ -88,8 +88,8 @@
                                             height="20px"
                                             viewBox="0 0 24 24"
                                             class="icon
-                                                stroke-primary group-hover/svg-cart:stroke-secondary
-                                                fill-secondary group-hover/svg-cart:fill-primary h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                                                stroke-primary fill-secondary
+                                                h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
                                         >
                                             <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -127,7 +127,7 @@
                     </label>
                 </div>
             </div>
-            <a type="button" class="btn-outline-primary rounded-xl lg:rounded-full hidden md:flex flex-col lg:flex-row gap-0 lg:gap-1 items-center group/svg-shop h-full" href="<?php echo site_url() . '/shop'; ?>">
+            <a type="button" class="btn-outline-primary rounded-xl lg:rounded-full hidden md:flex flex-col lg:flex-row gap-0 md:gap-1 items-center group/svg-shop h-full" href="<?php echo site_url() . '/shop'; ?>">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 25 25"
@@ -170,7 +170,7 @@
             </a>
         </div>
         <div class="flex gap-5 justify-end items-center">
-            <div class="hidden md:flex lg:flex-row rounded-xl border border-primary p-1 h-full justify-between items-center">
+            <div class="hidden md:flex lg:flex-row rounded-xl border border-primary p-1 md:px-3 lg:p-1 h-full justify-between items-center">
                 <label class="swap swap-rotate">
                 <!-- this hidden checkbox controls the state -->
                 <input id="toggle-theme-btn-lg" type="checkbox" class="theme-controller" value="synthwave" />
@@ -192,7 +192,7 @@
                 </svg>
                 </label>
             </div>
-            <a type="button" class="btn-outline-primary rounded-xl lg:rounded-full hidden md:flex flex-col lg:flex-row gap-0 lg:gap-2 items-center group/svg-cart h-full" href="<?php echo site_url() . '/cart'; ?>">
+            <a type="button" class="btn-outline-primary rounded-xl lg:rounded-full hidden md:flex flex-col lg:flex-row gap-0 md:gap-1 lg:gap-2 items-center group/svg-cart h-full" href="<?php echo site_url() . '/cart'; ?>">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -208,7 +208,7 @@
                     Cart <?php if ( $cart_count ) : ?><div class="badge badge-sm badge-accent"><?php echo $cart_count; ?></div> <?php endif; ?>
                 </span>
                 <span class="lg:hidden text-xs">
-                    Cart
+                    Cart <?php if ( $cart_count ) : ?><div class="badge badge-sm badge-accent"><?php echo $cart_count; ?></div> <?php endif; ?>
                 </span>
             </a>
         </div>

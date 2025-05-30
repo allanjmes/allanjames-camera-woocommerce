@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
     <!-- single-product.php -->
     <section class="max-w-7xl xl:mx-auto">
-        <div class="mt-10 mb-15">
+        <div class="mt-10 mb-15 px-5 lg:px-0">
             <?php
                 /**
                  * woocommerce_before_main_content hook.
