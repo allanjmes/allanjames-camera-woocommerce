@@ -16,6 +16,7 @@
         <h1 class="text-primary text-9xl font-extrabold"><span id="loading-count">0</span></h1>
     </div>
 </div> -->
+<h1>test</h1>
 
 <?php
     require get_template_directory() . '/src/global/header.php';
