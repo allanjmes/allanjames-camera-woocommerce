@@ -1,0 +1,23 @@
+{
+  "name": "my-custom-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.5",
+    "tailwindcss": "^4.1.5",
+    "vite": "^6.3.4",
+    "vite-plugin-full-reload": "^1.2.0",
+    "daisyui": "^5.0.35"
+  },
+  "dependencies": {
+    
+  }
+}

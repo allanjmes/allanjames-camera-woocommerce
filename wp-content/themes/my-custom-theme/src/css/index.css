@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui" {
+  themes: false;
+  include: toggle;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-primary: oklch(26.2% 0.047 35.38);
+  --color-secondary: oklch(96.2% 0.015 97.1);
+  --color-accent: oklch(73.0% 0.196 65.8);
+  --color-warning: oklch(88.1% 0.185 83.1);
+  --color-gray-100: oklch(94% 0.015 97.1);
+  --color-gray-300: oklch(0.86 0.0098 87.47);
+  --color-gray-500: oklch(0.66 0.0094 84.58);
+
+  --color-white: #ffffff;
+  --color-black: #000;
+
+  --color-hover-primary: oklch(31% 0.047 35.38);
+  --color-hover-secondary: oklch(100% 0.015 97.1);
+  --color-hover-accent: oklch(83.0% 0.196 65.8);
+
+  --color-disabled-primary: oklch(51% 0.047 35.38);
+
+  --font-anuphan: "Anuphan", sans-serif;
+  --font-archivo: "Archivo", sans-serif;
+}
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+
+  --color-primary: oklch(88.0% 0.05 35.38);
+  --color-secondary: oklch(14.2% 0.015 97.1);
+  --color-accent: oklch(73.0% 0.196 65.8);
+  --color-warning: oklch(88.1% 0.185 83.1);
+  --color-gray-100: oklch(56.2% 0.015 97.1);
+  --color-gray-300: oklch(66.2% 0.015 97.1);
+  --color-gray-500: oklch(86.2% 0.015 97.1);
+
+  --color-white: #ffffff;
+  --color-black: #000;
+
+  --color-hover-primary: oklch(98.8% 0.05 35.38);
+  --color-hover-secondary: oklch(20.2% 0.015 97.1);
+  --color-hover-accent: oklch(58.0% 0.196 65.8);
+
+  --color-disabled-primary: oklch(68.8% 0.05 35.38);
+}
+
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  .font-anuphan {
+    font-family: var(--font-anuphan);
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; -> values from 100 - 700 */
+    font-style: normal;
+  }
+
+  .font-archivo {
+    font-family: var(--font-archivo);
+    /* font-weight: <weight>; -> values from 100 - 900 */
+    font-style: normal;
+    /* font-variation-settings:
+      "wdth" <width>; -> letter spacing values from 62 - 125  */
+   }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-primary);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-primary);
+      }
+    }
+  }
+  [data-theme="dark"] .btn-primary {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-primary);
+        /* color: var(--color-primary); */
+      }
+    }
+  }
+  .btn-outline-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+      }
+    }
+  }
+  .btn-secondary {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-secondary);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-secondary);
+      }
+    }
+  }
+  [data-theme="dark"] .btn-secondary {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-secondary);
+        /* color: var(--color-primary); */
+      }
+    }
+  }
+  .btn-outline-secondary {
+    border-radius: calc(infinity * 1px);
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+      }
+    }
+  }
+  .btn-accent {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-accent);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-accent);
+      }
+    }
+  }
+  [data-theme="dark"] .btn-accent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-hover-accent);
+        /* color: var(--color-primary); */
+      }
+    }
+  }
+  .btn-outline-accent {
+    border-radius: calc(infinity * 1px);
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    /* font-weight: var(--font-weight-semibold); */
+    color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-accent);
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
+
+.woocommerce td.product-thumbnail img {
+  width: 100px !important;
+  height: auto !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.woocommerce-message {
+  border-top-color: var(--color-accent);
+  background-color: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+.woocommerce-info {
+  border-top-color: var(--color-accent);
+  background-color: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+html {
+  background-color: var(--color-secondary);
+}
