@@ -4,6 +4,11 @@ import '../../style.css';
 // import './page-loader';
 import './toggle-theme';
 import './close-sidebar-drawer';
+import './slick-carousel';
+
+$( document ).ready(function() {
+    console.log('jquery ready!');
+})
 
 // Cart Quantity
 document.addEventListener('DOMContentLoaded', function () {
