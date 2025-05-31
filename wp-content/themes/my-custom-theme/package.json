@@ -12,12 +12,12 @@
   "description": "",
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.5",
+    "daisyui": "^5.0.35",
     "tailwindcss": "^4.1.5",
     "vite": "^6.3.4",
-    "vite-plugin-full-reload": "^1.2.0",
-    "daisyui": "^5.0.35"
+    "vite-plugin-full-reload": "^1.2.0"
   },
   "dependencies": {
-    
+    "slick-carousel": "^1.8.1"
   }
 }

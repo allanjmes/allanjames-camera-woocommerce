@@ -29,6 +29,25 @@ function is_vite_running($host = 'localhost', $port = 5173) {
 }
 
 function my_custom_theme_scripts() {
+    $jquery_cdn = 'https://code.jquery.com/jquery-3.6.4.min.js';
+    $slick_css_cdn = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
+    $slick_js_cdn = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+
+    $slick_theme_css_cdn = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css';
+
+    wp_enqueue_style('slick-css', $slick_css_cdn, [], null);
+    wp_enqueue_style('slick-theme-css', $slick_theme_css_cdn, ['slick-css'], null);
+
+    // jQuery
+    wp_enqueue_script('jquery-cdn', $jquery_cdn, [], null, true);
+
+    // Slick CSS
+    wp_enqueue_style('slick-css', $slick_css_cdn, [], null);
+    wp_enqueue_style('slick-theme-css', $slick_theme_css_cdn, ['slick-css'], null);
+
+    // Slick JS
+    wp_enqueue_script('slick-js', $slick_js_cdn, ['jquery-cdn'], null, true);
+
     if (is_vite_running()) {
         // Inject Vite HMR client for hot reloads
         add_action('wp_footer', function () {
@@ -42,7 +61,7 @@ function my_custom_theme_scripts() {
         wp_enqueue_script(
             'theme-js',
             get_template_directory_uri() . '/dist/bundle.js',
-            [],
+            ['jquery-cdn', 'slick-js'], // depend on jQuery CDN
             filemtime(get_template_directory() . '/dist/bundle.js'),
             true
         );
