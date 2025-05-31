@@ -8,7 +8,7 @@
         <div class="hidden lg:block my-10"></div>
         <div class="bg-primary px-5 lg:px-0">
             <div class="grid grid-cols-1 lg:grid-cols-7">
-                <div class="col-span-1 lg:col-span-2 flex flex-col justify-center items-center lg:items-start gap-5 lg:gap-10 lg:ms-10">
+                <div class="order-3 lg:order-1 col-span-1 lg:col-span-2 flex flex-col justify-center items-center lg:items-start gap-5 lg:gap-10 lg:ms-10 pb-10 lg:pb-0">
                     <h1 class="text-secondary text-3xl lg:text-5xl font-light text-center lg:text-start pt-10 lg:pt-0">16 mega pixel HD digital camera</h1>
                     <div class="flex justify-center gap-3">
                         <a class="btn-accent flex gap-2 items-center" href="<?php echo site_url() . '/shop/'; ?>">
@@ -34,7 +34,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-span-2 lg:col-span-3 relative lg:-top-30 flex flex-col justify-center">
+                <div class="order-2 col-span-2 lg:col-span-3 relative lg:-top-30 flex flex-col justify-center">
                     <img
                         src="<?php echo get_template_directory_uri() . '/src/assets/home/3d-camera.png'; ?>"
                         class="relative scale-70 md:scale-60 lg:scale-70"
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-1 lg:col-span-2 flex flex-col justify-around gap-5 lg:gap-10 lg:me-10 py-10">
+                <div class="order-1 lg:order-3 col-span-1 lg:col-span-2 flex flex-col justify-around gap-5 lg:gap-10 lg:me-10 py-10">
                     <div class="flex flex-col gap-10">
                         <div class="flex flex-row gap-1">
                             <?php for ($i=0; $i < 5; $i++) { ?>
