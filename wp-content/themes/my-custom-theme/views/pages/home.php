@@ -6,9 +6,9 @@
             </h1>
         </div>
         <div class="hidden lg:block my-10"></div>
-        <div class="bg-primary">
+        <div class="bg-primary px-5 lg:px-0">
             <div class="grid grid-cols-1 lg:grid-cols-7">
-                <div class="col-span-1 lg:col-span-2 flex flex-col justify-center items-center lg:items-start gap-10 lg:ms-10">
+                <div class="col-span-1 lg:col-span-2 flex flex-col justify-center items-center lg:items-start gap-5 lg:gap-10 lg:ms-10">
                     <h1 class="text-secondary text-3xl lg:text-5xl font-light text-center lg:text-start pt-10 lg:pt-0">16 mega pixel HD digital camera</h1>
                     <div class="flex justify-center gap-3">
                         <a class="btn-accent flex gap-2 items-center" href="<?php echo site_url() . '/shop/'; ?>">
@@ -37,11 +37,11 @@
                 <div class="col-span-2 lg:col-span-3 relative lg:-top-30 flex flex-col justify-center">
                     <img
                         src="<?php echo get_template_directory_uri() . '/src/assets/home/3d-camera.png'; ?>"
-                        class="relative scale-60 lg:scale-70"
+                        class="relative scale-70 md:scale-60 lg:scale-70"
                         alt=""
                     >
                     <div class="flex justify-center">
-                        <div class="w-90">
+                        <div class="w-70 md:w-100 lg:w-90">
                             <!-- <p class="text-secondary relative">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime dignissimos ad aut doloremque harum at deleniti saepe temporibus id?</p> -->
                             <div class="multiple-items">
                                 <?php
@@ -62,13 +62,15 @@
                                             global $product;
                                             ?>
                                                 <div class="border rounded-xl border-secondary flex justify-center h-full m-2">
-                                                    <img
-                                                        src="<?php echo wp_get_attachment_image_url($product->get_image_id(), 'full'); ?>"
-                                                        width="auto"
-                                                        height="100px"
-                                                        class=""
-                                                        alt="<?php the_title(); ?>"
-                                                    >
+                                                    <a class="flex justify-center" href="<?php the_permalink(); ?>">
+                                                        <img
+                                                            src="<?php echo wp_get_attachment_image_url($product->get_image_id(), 'full'); ?>"
+                                                            width="auto"
+                                                            height="100px"
+                                                            class="h-[70px] md:h-[85px] lg:h-[100px]"
+                                                            alt="<?php the_title(); ?>"
+                                                        >
+                                                    </a>
                                                 </div>
                                             <?php
                                         endwhile;
@@ -98,7 +100,7 @@
                         </div>
                         <p class="text-secondary">"I couldn't be happier with my new Camera. The craftsmanship is impeccable, and every detail reflects quality."</p>
                     </div>
-                    <div class="border border-secondary h-full w-full flex flex-col justify-around">
+                    <div class="hidden lg:flex border border-secondary h-full w-full flex-col justify-around">
                         <!-- <h1 class="text-secondary">hello</h1> -->
                         <div class="flex justify-center">
                             <h5 class="text-center text-secondary w-50">Captures sharp images and full HD (1080p) Video</h5>
@@ -257,14 +259,14 @@
                 <!-- Top-left Image -->
                 <img
                     src="<?php echo get_template_directory_uri() . '/src/assets/home/retro-camera.webp'; ?>"
-                    class="hidden md:block absolute top-0 left-0 w-32 lg:w-55 h-auto"
+                    class="hidden lg:block absolute top-0 left-0 w-32 lg:w-55 h-auto"
                     alt="Retro Camera Left"
                 >
     
                 <!-- Bottom-right or mid-right Image -->
                 <img
                     src="<?php echo get_template_directory_uri() . '/src/assets/home/female-colorful.webp'; ?>"
-                    class="hidden md:block absolute top-15 right-0 w-32 lg:w-60 h-auto"
+                    class="hidden lg:block absolute top-15 right-0 w-32 lg:w-60 h-auto"
                     alt="Retro Camera Right"
                 >
     
