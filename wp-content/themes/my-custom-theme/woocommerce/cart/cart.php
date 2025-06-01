@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 <!-- after before cart -->
-<div class="d-flex flex-column gap-5 px-5 lg:px-0">
+<div class="d-flex flex-column gap-5">
 	<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
