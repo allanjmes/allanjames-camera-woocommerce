@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php endif; ?>
 
-		<h1>From login - /theme/woocommerce/myaccount/form-login.php</h1>
+		<!-- <h1>From login - /theme/woocommerce/myaccount/form-login.php</h1> -->
 
 		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 

@@ -55,7 +55,27 @@
                                 </li>
                             </div>
                             <div class="flex flex-col gap-2 text-primary">
-                                <li class="pt-5">Search</li>
+                                <li class="pt-5 ms-1">
+                                    <a class="p-0 flex gap-2" href="<?php echo site_url() . '/my-account'; ?>">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 32 32"
+                                            enable-background="new 0 0 32 32"
+                                            id="Stock_cut"
+                                            version="1.1"
+                                            xml:space="preserve"
+                                            class="icon p-0 h-[15px] w-[15px] lg:h-[40px] lg:w-[40px]"
+                                        >
+                                            <g class="stroke-primary fill-secondary">
+                                                <circle cx="16" cy="16" r="15" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                                <path d="M26,27L26,27   c0-5.523-4.477-10-10-10h0c-5.523,0-10,4.477-10,10v0" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                                <circle cx="16" cy="11" r="6" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                            </g>
+                                        </svg>
+                                        Account
+                                    </a>
+                                </li>
                                 <li class="p-0">
                                     <a class="p-0 flex gap-1" href="<?php echo site_url() . '/shop'; ?>">
                                         <svg
@@ -149,8 +169,8 @@
                     Shop
                 </span>
             </a>
-            <button class="btn-outline-primary hidden lg:flex items-center gap-1 group/svg-search h-full">
-                <svg
+            <a class="btn-outline-primary hidden lg:flex items-center gap-2 group/svg-search h-full" href="<?php echo site_url() . '/my-account'; ?>">
+                <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
                     height="20px"
@@ -160,9 +180,26 @@
                         fill-secondary group-hover/svg-search:fill-primary"
                 >
                     <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 32 32"
+                    enable-background="new 0 0 32 32"
+                    id="Stock_cut"
+                    version="1.1"
+                    xml:space="preserve"
+                >
+                    <g class="stroke-primary fill-secondary group-hover/svg-search:stroke-secondary group-hover/svg-search:fill-primary">
+                        <circle cx="16" cy="16" r="15" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <path d="M26,27L26,27   c0-5.523-4.477-10-10-10h0c-5.523,0-10,4.477-10,10v0" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <circle cx="16" cy="11" r="6" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                    </g>
                 </svg>
-                Search
-            </button>
+                Account
+            </a>
         </div>
         <div class="flex justify-end md:justify-center items-center">
             <a href="<?php echo site_url(); ?>">
