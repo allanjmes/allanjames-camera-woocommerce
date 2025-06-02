@@ -55,8 +55,8 @@
                                 </li>
                             </div>
                             <div class="flex flex-col gap-2 text-primary">
-                                <li class="pt-5 ms-1">
-                                    <a class="p-0 flex gap-2" href="<?php echo site_url() . '/my-account'; ?>">
+                                <li class="pt-5 ms-1 lg:ms-2">
+                                    <a class="p-0 flex gap-2 lg:gap-3" href="<?php echo site_url() . '/my-account'; ?>">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -65,7 +65,7 @@
                                             id="Stock_cut"
                                             version="1.1"
                                             xml:space="preserve"
-                                            class="icon p-0 h-[15px] w-[15px] lg:h-[40px] lg:w-[40px]"
+                                            class="icon p-0 h-[15px] w-[15px] lg:h-[25px] lg:w-[25px]"
                                         >
                                             <g class="stroke-primary fill-secondary">
                                                 <circle cx="16" cy="16" r="15" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -95,10 +95,10 @@
                                         Shop
                                     </a>
                                 </li>
-                                <li>
+                                <li class="ms-1 lg:ms-2">
                                     <label class="p-0">Product Categories</label>
-                                    <li><a class="p-0 ms-5" href="<?php echo site_url() . '/product-category/camera/'; ?>">Camera</a></li>
-                                    <li><a class="p-0 ms-5" href="<?php echo site_url() . '/product-category/video-camera/'; ?>">Video Camera</a></li>
+                                    <li><a class="p-0 ms-5 lg:ms-10" href="<?php echo site_url() . '/product-category/camera/'; ?>">Camera</a></li>
+                                    <li><a class="p-0 ms-5 lg:ms-10" href="<?php echo site_url() . '/product-category/video-camera/'; ?>">Video Camera</a></li>
                                 </li>
                                 <li class="p-0">
                                     <a class="p-0 flex gap-2" href="<?php echo site_url() . '/cart'; ?>">
